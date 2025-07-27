@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://base64encode.tech/sitemap.xml
