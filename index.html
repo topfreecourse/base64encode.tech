@@ -258,7 +258,7 @@
 					<li><strong>Character Set Selection:</strong> Use UTF-8 by default, or switch to another encoding as needed. When handling file inputs, binary mode is applied to maintain the original data without any encoding or loss.</li>
 					<li><strong>Newline Handling:</strong> Normalize line breaks between Unix (LF) and Windows (CRLF) systems before encoding.</li>
 					<li><strong>Line-by-Line Encoding:</strong> Encode each line individually for independent data blocks.</li>
-					<li><strong>Split into Chunks:</strong> Break Base64 output into 76-character lines to comply with MIME (RFC 2045).</li>
+					<li><strong>Chunked Output:</strong>  Divide the Base64-encoded result into lines of 76 characters to follow the MIME standard defined in RFC 2045.</li>
 					<li><strong>URL-safe Base64:</strong> Generate web-friendly Base64 using "-" and "_" instead of "+" and "/", and omit padding.</li>
 					<li><strong>Live Encoding Mode:</strong> Encode data instantly in your browser using JavaScript, without sending data to a server.</li>
 					</ul>
@@ -271,7 +271,10 @@
 					<p>Base64Encode.tech is completely free to use. There's no need to install any software—just open the website and begin encoding or decoding Base64.</p>
 
 					<h5>Understanding Base64 Encoding</h5>
-					<p>Base64 is an encoding scheme that converts binary data into text using 64 printable characters. It ensures compatibility with systems that handle only textual data.</p>
+					
+					<p>Using 64 printable symbols, Base64 encodes binary content into a format that can be safely displayed and transmitted as text.</p>
+
+
 					<p>Character set typically includes A–Z, a–z, 0–9, plus <code>+</code> and <code>/</code>. The URL-safe version substitutes these characters with <code data-start="55" data-end="58">-</code> and <code data-start="63" data-end="66">_</code>, and removes the padding symbol <code data-start="99" data-end="102">=</code>.</p>
 					<h5>Example</h5>
 					<p>
@@ -282,7 +285,7 @@
 					Base64: <strong>V2Vi</strong>
 					</p>
 
-					<p>Thus, Base64 encoding transforms 3 bytes of data into 4 encoded characters.</p>
+				
 				</div>
 			</div>
 			
